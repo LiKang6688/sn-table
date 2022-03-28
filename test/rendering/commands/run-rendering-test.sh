@@ -4,6 +4,8 @@
 # To know the error location in the running code
 set -e
 
+npm view @playwright/test version
+
 # Create and start the container with the name *sn-tale-playwright*
 # using the Docker host network stack and binding your current directory
 # in the background in a “detached” mod and remove the container once it exits/stops
