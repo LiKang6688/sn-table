@@ -3,18 +3,30 @@ import './style.css';
 
 async function run() {
   const selectionsToolbarElement = document.getElementById('selections');
-  const filterElement = document.getElementById('filter');
+  const filterAlpha = document.getElementById('filter1');
+  const filterAsciiAlpha = document.getElementById('filter2');
+  const filterDim1 = document.getElementById('filter3');
+  const filterDim2 = document.getElementById('filter4');
 
   const selections = await nuked.selections();
   selections.mount(selectionsToolbarElement);
 
-  const field = await nuked.field('Case Owner Group');
-  field.mount(filterElement, { title: 'Department' });
+  const fieldAlpha = await nuked.field('Alpha');
+  fieldAlpha.mount(filterAlpha, { title: 'Alpha' });
+
+  const fieldAsciiAlpha = await nuked.field('AsciiAlpha');
+  fieldAsciiAlpha.mount(filterAsciiAlpha, { title: 'AsciiAlpha' });
+
+  const fieldDim1 = await nuked.field('Dim1');
+  fieldDim1.mount(filterDim1, { title: 'Dim1' });
+
+  const fieldDim2 = await nuked.field('Dim2');
+  fieldDim2.mount(filterDim2, { title: 'Dim2' });
 
   nuked.render({
     element: document.querySelector('.object'),
     type: 'table',
-    fields: ['Number of New Cases', 'Number of Closed Cases', 'Priority'],
+    fields: ['Alpha', 'AsciiAlpha', 'Dim1', 'Dim2', 'Dim3', 'Expression1', 'Expression2', 'Num', 'TransID'],
   });
 }
 

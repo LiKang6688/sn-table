@@ -4,8 +4,8 @@ import schema from 'enigma.js/schemas/12.170.2.json';
 import table from '@nebula.js/sn-table';
 
 const config = {
-  host: 'sense-demo.qlik.com',
-  appId: '133dab5d-8f56-4d40-b3e0-a6b401391bde',
+  host: 'rd-gqq-08-21.rdlund.qliktech.com',
+  appId: '46cac4f4-5cd0-4d39-ba95-73b9366b430e',
 };
 
 const enigmaApp = await enigma
